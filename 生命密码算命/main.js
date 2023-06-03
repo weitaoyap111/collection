@@ -124,7 +124,7 @@ function calculate(){
 function final_single_digits(value){
 	var t1 = 0;
 	var t2 = 0;
-	while (value > 10){
+	while (value >= 10){
 		value = value.toString();
 		t1 = Number(value[0]);
 		t2 = Number(value[1]);
