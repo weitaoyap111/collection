@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>生命密码算命</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">首頁</a>
+			<a class="navbar-brand" href="version.html">Version</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!--div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+				</ul>
+			</div-->
+		</nav>
+		
+		<div class="container-fluid">
+			<div class="row"></div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						您的生日號碼 : <input type="number" id="birthday_date" class="ignore_beside_number" min="0" max="99991231" value="19970305"/> 例如：19970305
+						<button type="submit" onclick="calculate()">計算</button>
+						<button type="submit" onclick="reset()">重置</button>
+					</div>
+					<hr>
+					<div class="insert_image">
+						<h2>生命密碼全息圖</h2>
+						<div class="image_1">
+							<div style="position: absolute;left: 105px; bottom:40px">
+								<h3 class="no_margin" id="calc_a">A</h3>
+							</div>
+							<div style="position: absolute;left: 140px; bottom:40px">
+								<h3 class="no_margin" id="calc_b">B</h3>
+							</div>
+							<div style="position: absolute;left: 190px; bottom:40px">
+								<h3 class="no_margin" id="calc_c">C</h3>
+							</div>
+							<div style="position: absolute;left: 225px; bottom:40px">
+								<h3 class="no_margin" id="calc_d">D</h3>
+							</div>
+							<div style="position: absolute;left: 340px; bottom:40px">
+								<h3 class="no_margin" id="calc_e">E</h3>
+							</div>
+							<div style="position: absolute;left: 380px; bottom:40px">
+								<h3 class="no_margin" id="calc_f">F</h3>
+							</div>
+							<div style="position: absolute;left: 420px; bottom:40px">
+								<h3 class="no_margin" id="calc_g">G</h3>
+							</div>
+							<div style="position: absolute;left: 460px; bottom:40px">
+								<h3 class="no_margin" id="calc_h">H</h3>
+							</div>
+							<div style="position: absolute;left: 120px; bottom:140px">
+								<h3 class="no_margin" id="calc_i">I</h3>
+							</div>
+							<div style="position: absolute;left: 205px; bottom:140px">
+								<h3 class="no_margin" id="calc_j">J</h3>
+							</div>
+							<div style="position: absolute;left: 360px; bottom:140px">
+								<h3 class="no_margin" id="calc_k">K</h3>
+							</div>
+							<div style="position: absolute;left: 440px; bottom:140px">
+								<h3 class="no_margin" id="calc_l">L</h3>
+							</div>
+							<div style="position: absolute;left: 165px; bottom:240px">
+								<h3 class="no_margin" id="calc_m">M</h3>
+							</div>
+							<div style="position: absolute;left: 400px; bottom:240px">
+								<h3 class="no_margin" id="calc_n">N</h3>
+							</div>
+							<div style="position: absolute;left: 280px; bottom:360px">
+								<h3 class="no_margin" id="calc_o">O</h3>
+							</div>
+							<div style="position: absolute;left: 70px; bottom:440px">
+								<h3 class="no_margin" id="calc_s">S</h3>
+							</div>
+							<div style="position: absolute;left: 120px; bottom:440px">
+								<h3 class="no_margin" id="calc_x">X</h3>
+							</div>
+							<div style="position: absolute;left: 170px; bottom:440px">
+								<h3 class="no_margin" id="calc_w">W</h3>
+							</div>
+							<div style="position: absolute;left: 390px; bottom:440px">
+								<h3 class="no_margin" id="calc_v">V</h3>
+							</div>
+							<div style="position: absolute;left: 440px; bottom:440px">
+								<h3 class="no_margin" id="calc_u">U</h3>
+							</div>
+							<div style="position: absolute;left: 490px; bottom:440px">
+								<h3 class="no_margin" id="calc_t">T</h3>
+							</div>
+							<div style="position: absolute;left: 200px; bottom:510px">
+								<h3 class="no_margin" id="calc_q">Q</h3>
+							</div>
+							<div style="position: absolute;left: 370px; bottom:510px">
+								<h3 class="no_margin" id="calc_p">P</h3>
+							</div>
+							<div style="position: absolute;left: 280px; bottom:540px">
+								<h3 class="no_margin" id="calc_r">R</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="insert_image">
+						<h2>生命密碼三角形</h2>
+						<div class="image_2">
+							<div style="position: absolute;left: 120px; bottom:40px">
+								<h3 class="no_margin" id="calc_a1">A</h3>
+							</div>
+							<div style="position: absolute;left: 155px; bottom:40px">
+								<h3 class="no_margin" id="calc_b1">B</h3>
+							</div>
+							<div style="position: absolute;left: 205px; bottom:40px">
+								<h3 class="no_margin" id="calc_c1">C</h3>
+							</div>
+							<div style="position: absolute;left: 240px; bottom:40px">
+								<h3 class="no_margin" id="calc_d1">D</h3>
+							</div>
+							<div style="position: absolute;left: 355px; bottom:40px">
+								<h3 class="no_margin" id="calc_e1">E</h3>
+							</div>
+							<div style="position: absolute;left: 395px; bottom:40px">
+								<h3 class="no_margin" id="calc_f1">F</h3>
+							</div>
+							<div style="position: absolute;left: 435px; bottom:40px">
+								<h3 class="no_margin" id="calc_g1">G</h3>
+							</div>
+							<div style="position: absolute;left: 475px; bottom:40px">
+								<h3 class="no_margin" id="calc_h1">H</h3>
+							</div>
+							<div style="position: absolute;left: 135px; bottom:140px">
+								<h3 class="no_margin" id="calc_i1">I</h3>
+							</div>
+							<div style="position: absolute;left: 220px; bottom:140px">
+								<h3 class="no_margin" id="calc_j1">J</h3>
+							</div>
+							<div style="position: absolute;left: 375px; bottom:140px">
+								<h3 class="no_margin" id="calc_k1">K</h3>
+							</div>
+							<div style="position: absolute;left: 455px; bottom:140px">
+								<h3 class="no_margin" id="calc_l1">L</h3>
+							</div>
+							<div style="position: absolute;left: 180px; bottom:240px">
+								<h3 class="no_margin" id="calc_m1">M</h3>
+							</div>
+							<div style="position: absolute;left: 415px; bottom:240px">
+								<h3 class="no_margin" id="calc_n1">N</h3>
+							</div>
+							<div style="position: absolute;left: 295px; bottom:360px">
+								<h3 class="no_margin" id="calc_o1">O</h3>
+							</div>
+							<div style="position: absolute;left: 85px; bottom:400px">
+								<h3 class="no_margin" id="calc_s1">S</h3>
+							</div>
+							<div style="position: absolute;left: 135px; bottom:400px">
+								<h3 class="no_margin" id="calc_x1">X</h3>
+							</div>
+							<div style="position: absolute;left: 185px; bottom:400px">
+								<h3 class="no_margin" id="calc_w1">W</h3>
+							</div>
+							<div style="position: absolute;left: 405px; bottom:400px">
+								<h3 class="no_margin" id="calc_v1">V</h3>
+							</div>
+							<div style="position: absolute;left: 455px; bottom:400px">
+								<h3 class="no_margin" id="calc_u1">U</h3>
+							</div>
+							<div style="position: absolute;left: 505px; bottom:400px">
+								<h3 class="no_margin" id="calc_t1">T</h3>
+							</div>
+							<div style="position: absolute;left: 215px; bottom:480px">
+								<h3 class="no_margin" id="calc_q1">Q</h3>
+							</div>
+							<div style="position: absolute;left: 385px; bottom:480px">
+								<h3 class="no_margin" id="calc_p1">P</h3>
+							</div>
+							<div style="position: absolute;left: 295px; bottom:540px">
+								<h3 class="no_margin" id="calc_r1">R</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						<h2>那麼要如何解析生命密碼三角形呢？</h2>
+						<span>
+						O：是主性格密碼，代表一個人60%的行為模式，也是你的<b>生命數字</b>。<br>
+						I、J、K、L、M、N：是內在性格密碼，再加上O，總共七個數字稱作「七魄（喜、怒、哀、懼、愛、欲、惡）」。<br>
+						S、X、W：代表我們的工作、朋友，同時也代表21歲到40歲的經歷狀態。<br>
+						R、Q、P：代表下屬、兒女，同時也代表41歲到60歲的經歷狀態<br>
+						V、U、T：代表晚年、家庭，同時也代表61歲以後的經歷狀態。<br>
+						喜： <input id="emotion1" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						怒： <input id="emotion2" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						哀： <input id="emotion3" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						懼： <input id="emotion4" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						愛： <input id="emotion5" style="border:none;margin-bottom:5px" value="" readonly /><br> 
+						欲： <input id="emotion6" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						惡： <input id="emotion7" style="border:none;margin-bottom:5px" value="" readonly /><br>
+						</span>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						<h2>三角形內外1—9的能量呈現：</h2>
+						<ul>
+							<li><b>數字密碼1</b>：正面代表獨立創新且有自信；負面代表過度堅持自我、自負。
+							如果你的主性格密碼是1，你很有自己的想法且執行力強，但也要適度地聽從他人的意見。</li>
+							<li><b>數字密碼2</b>：正面代表溝通和信任；負面代表容易猶豫不決。
+							如果你的主性格密碼是2，你是一個溫柔體貼、善於溝通的人，團隊裡不可或缺的靈魂人物，但你很容易受他人的影響，要保有自己的主見。</li>
+							<li><b>數字密碼3</b>：正面代表熱於服務且有行動力，負面代表沒耐心、急性子。
+							如果你的主性格密碼是3，你喜歡的事學的很快，但很快會對一件事不感興趣，要學著積極有耐心的去處理好你的事情。</li>
+							<li><b>數字密碼4</b>：正面代表擅長守業，理財，學習策劃能力強，負面代表保守，直接，死板。
+							如果你的主性格密碼是4，你對數字理財很有一套，雖然不愛學習，但對有好處的學習能力很強。</li>
+							<li><b>數字密碼5</b>：正面代表口才好、美食家、旅行家、個性開朗；負面代表固執。
+							如果你的主性格密碼是5，你是一個有夢想和願景的人，但缺少明確的目標。</li>
+							<li><b>數字密碼6</b>：正面代表是遠見，財富，智慧，追求完美；負面代表浪費。
+							如果你的主性格密碼是6，你天生有治療別人的能力，喜歡交朋友，也代表財富。</li>
+							<li><b>數字密碼7</b>： 正面代表好奇心，求知欲強；負面代表的是就是慢，拖延。
+							如果你的主性格密碼是7，你很善於分析、找規律且博學多聞，但容易懶散。</li>
+							<li><b>數字密碼8</b>： 正面代表生意、公關、人際開發能力強；負面代表愛面子。
+							如果你的主性格密碼是8，你很有責任感和使命感，但很容易產生糾結的情緒，容易鑽死胡同。</li>
+							<li><b>數字密碼9</b>：正面代表成功、機會、洞察力；負面代表貪心、消極。
+							如果你的主性格密碼是9，你學東西的速度很快身邊的機會也多，天馬行空學習力強，但善變，機會多，選擇多，不會堅持。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						<h2>生命密碼配對?</h2>
+						<span>
+							將兩個人的生命數位相加到個位，就可以知曉你們的配對指數。
+						</span><br>
+						我的生日號碼： <input type="number" id="birthday_date2" class="ignore_beside_number" min="0" max="99991231" value="19970305"/> 例如：19970305<br>
+						對象生日號碼： <input type="number" id="birthday_date3" class="ignore_beside_number" min="0" max="99991231" value="19970309"/> 例如：19970309<br>
+						<button type="submit" onclick="calculate2()">計算</button>
+						<button type="submit" onclick="reset()">重置</button>
+						生命密碼聯合碼: <input type="text" id="partner_o" value="" readonly />
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						<h2>生命密碼聯合碼?</h2>
+						<span>
+						得到合婚數字後，如何知道這個合婚密碼的結果呢？
+						</span>
+						<ul>
+						<li><b>合碼數1：</b>
+						不理想。孤獨，雙方太獨立，在交際應酬和錢財管理方面都不依賴對方，嚮往各自的私人空間。可能在婚後因工作的關係會相隔兩地。</li>
+						<li><b>合碼數2：</b>
+						理想。戀愛時二人會有說不完的話題，善於溝通。</li>
+						<li><b>合碼數3：</b>
+						不理想，相處時容易情緒化，容易發生衝突。</li>
+						<li><b>合碼數4：</b>
+						理想。生活有序，相敬如賓，會用心經營家庭。婚後都會計畫未來，夫婦會一起學習成長。</li>
+						<li><b>合碼數5：</b>
+						不理想。容易走極端，猜疑多。需要一方遷就另一方。</li>
+						<li><b>合碼數6：</b>
+						理想。忠誠，信賴，注重家庭觀念。婚後會越來越有錢。</li>
+						<li><b>合碼數7：</b>
+						很理想。開心的家庭氛圍。</li>
+						<li><b>合碼數8：</b>
+						不理想。組合壓力大，婚後雙方都會給對方壓力，各人的腳步也會不一致。</li>
+						<li><b>合碼數9：</b>
+						組合成功，完美，感情關係與事業並行。幸福美滿的一對。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="footer bg-dark">
+			<div class="container">
+				<span class="text-light">Bootstrap 4 sticky footer content here.</span>
+			</div>
+		</footer>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
