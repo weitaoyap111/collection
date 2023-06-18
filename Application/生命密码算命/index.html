@@ -5,24 +5,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>生命密码算命</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="../index.html">最前面</a>
-			<a class="navbar-brand" href="#">首頁</a>
-			<a class="navbar-brand" href="version.html">Version</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!--div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-				</ul>
-			</div-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="../../index.html">Main Menu</a>
+				<a class="navbar-brand" href="index.html">Main Page</a>
+				<a class="navbar-brand" href="version.html">Version</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<!--li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">首頁</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li-->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Application
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="#">生命密码算命</a></li>
+								<li><a class="dropdown-item" href="../google translate/index.html">Google Translate</a></li>
+								<!--li><a class="dropdown-item" href="#">Something else here</a></li-->
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 		
 		<div class="container-fluid">
@@ -296,13 +313,13 @@
 			</div>
 		</div>
 		
-		<footer class="footer bg-dark">
+		<footer class="footer bg-dark" style="position:sticky; bottom:0; width:100%">
 			<div class="container">
-				<span class="text-light">2023 Copyright by weitaoyap.</span>
+				<span class="text-light">2023 @ Copyright by weitaoyap.</span>
 			</div>
 		</footer>
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-		<script src="main.js"></script>
+		<script src="index.js"></script>
 	</body>
 </html>
