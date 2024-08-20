@@ -1,9 +1,10 @@
-<!doctype html>
 <html lang="en">
 	<head>
+		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>生命密码算命(Version)</title>
+		<title>What to Eat?</title>
+		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 		<link rel="stylesheet" href="index.css">
 	</head>
@@ -12,7 +13,6 @@
 			<div class="container-fluid">
 				<a class="navbar-brand" href="../../index.html">Main Menu</a>
 				<a class="navbar-brand" href="index.html">Main Page</a>
-				<a class="navbar-brand" href="version.html">Version</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -32,26 +32,50 @@
 								Application
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="../index.html">生命密码算命</a></li>
-								<!--li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li-->
+								<li><a class="dropdown-item" href="../生命密码算命/index.html">生命密码算命</a></li>
+								<li><a class="dropdown-item" href="../google translate/index.html">Google Translate</a></li>
+								<li><a class="dropdown-item" href="../what should I eat/index.html">What should I eat?</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		
 		<div class="container-fluid">
 			<div class="row"></div>
 			<hr>
 			<div class="row">
-				<div class="col-sm-12">
-					<h1>Version 1.0</h1>
-					<span>
-						Update: 2023-06-03 19:17
-					<span>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10" style="text-align:center;margin-top:50px">
+					<h1>Let's God choose for you</h1>
+					<div class="alert alert-info" role="alert" id="result">
+						Tell me, God.
+					</div>
+					<h3 id="result" style="color:blue"></h3>
+					<!--h2>Options</h2>
+					<h3 id="result" style="color:blue"></h3>
+					<label for="distance">Distance</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="distance_label">Distance</span>
+						</div>
+						<input type="text" class="form-control" id="distance_v" name="distance_v" value="1500" />
+						<div class="input-group-append">
+							<span class="input-group-text">meter</span>
+						</div>
+					</div>
+					<h3 id="result" style="color:blue"></h3-->
+					<div class="btn-group btn-group-lg">
+						<button type="button" class="btn btn-primary" id="btn_change_x_location" onclick="draw();">Start (<s>My Location</s>)</button>
+						<!--button type="button" class="btn btn-primary" id="btn_change_location" onclick="getLocation();">Start (My Location)</button-->
+					</div>
+					<p id="demo"></p>
+					<div class="mb-3">
+						<label for="FoodList" class="form-label">Food list</label>
+						<textarea class="form-control" id="FoodList" rows="8" placeholder="put all food with ',' as separator">Nasi Lemak, KFC, MCD, BKT, Texas Chicken</textarea>
+					</div>
 				</div>
+				<div class="col-sm-1"></div>
 			</div>
 		</div>
 		
@@ -62,5 +86,6 @@
 		</footer>
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<script src="index.js"></script>
 	</body>
 </html>
